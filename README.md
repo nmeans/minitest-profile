@@ -1,6 +1,6 @@
 # Minitest::Profile
 
-TODO: Write a gem description
+Outputs a list of your 10 slowest tests at the end of a test run
 
 ## Installation
 
@@ -16,9 +16,21 @@ Or install it yourself as:
 
     $ gem install minitest-profile
 
+Then add this line to your application's test_helper/spec_helper:
+
+    require 'minitest/profile'
+
 ## Usage
 
-TODO: Write usage instructions here
+Use the `--profile` flag to invoke the plugin.
+
+Direct invocation:
+
+    `ruby test_thing.rb --profile`
+
+Via rake test runner:
+
+    `TESTOPTS='--profile' rake test`
 
 ## Contributing
 
@@ -27,3 +39,4 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
