@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["nick@heliumsyndicate.com"]
   spec.description   = %q{Outputter to display the slowest tests in a minitest suite}
   spec.summary       = %q{Outputter to display the slowest tests in a minitest suite}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/nmeans/minitest-profile"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
