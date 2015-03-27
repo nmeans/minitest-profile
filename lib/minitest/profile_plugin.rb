@@ -34,7 +34,7 @@ module Minitest
       puts "=" * 80
       puts
       sorted_results[0,10].each do |time, test_name|
-        puts "#{sprintf("%7.4f",time)}ms - #{test_name}"
+        puts "#{sprintf("%7.4f",time * 1000)}ms - #{test_name}"
       end
 
       puts
