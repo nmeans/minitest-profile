@@ -30,7 +30,7 @@ module Minitest
       return unless passed?
       puts
       puts "=" * 80
-      puts "Your 10 Slowest Tests"
+      puts "Your 10 Slowest Tests                    Average for #{sorted_results.length} tests is #{sprintf("%7.4f", average_time * 1000)}ms"
       puts "=" * 80
       puts
       sorted_results[0,10].each do |time, test_name|
@@ -41,7 +41,10 @@ module Minitest
     end
 
     def sorted_results
-      results.sort { |a, b| b[0] <=> a[0] }
+      @r ||= results.sort { |a, b| b[0] <=> a[0] } end
+
+    def average_time
+      sorted_results.map{|t,_| t}.reduce(0, :+) / sorted_results.length
     end
   end
 end
